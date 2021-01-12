@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<!--dict_vpn_config-->
+	</array>
+	<key>PayloadDisplayName</key>
+	<string><!--field_profile_name--></string>
+	<key>PayloadIdentifier</key>
+	<string><!--field_profile_identifier--></string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string><!--field_profile_payload_uuid--></string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
