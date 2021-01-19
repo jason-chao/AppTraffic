@@ -236,6 +236,8 @@ class Machine:
 
         proxy_port = network_ops.get_an_unused_local_port()
         web_port = network_ops.get_an_unused_local_port()
+        if self.machine_config["MITMProxy"]["web_port_start"] and self.machine_config["MITMProxy"]["web_port_end"]:
+            web_port = network_ops.get_an_unused_local_port(range=(int(self.machine_config["MITMProxy"]["web_port_start"]), int(self.machine_config["MITMProxy"]["web_port_end"])))
         subnet = network_ops.get_random_unused_subnet()
 
         self.setup_exit_hub(subnet=subnet, exit_hub_name=exit_hub_name, exit_hub_password=exit_hub_password, entry_node_hostname=entry_node_hostname,
