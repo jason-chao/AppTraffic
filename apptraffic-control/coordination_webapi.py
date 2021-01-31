@@ -296,7 +296,7 @@ def check_recording_status(username, session_id):
             status_result["exitNodeCreated"] = session["resources"]["exit_node"]["created"].astimezone().isoformat()
         if "mitm_web_port" in session:
             status_result["mitm_web_port"] = session["mitm_web_port"]
-            status_result["exit_node_public_hostname"] = socket.gethostbyname(session["resources"]["exit_node"]["public_hostname"])
+            status_result["exit_node_public_hostname"] = socket.gethostbyname(session["resources"]["exit_node"]["public_hostname"]) # MITMweb does not allow binding to domain names; the use of IP address is necessnary
         if "ended" in session:
             status_result["ended"] = session["ended"].astimezone().isoformat()
         result["returned"] = status_result

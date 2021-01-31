@@ -464,7 +464,7 @@ def new_redis_connection_thread(machine_config: {}, channel=None, logger=None):
     redis_pubsub.psubscribe(**{channel: redis_subscription_handler})
     thread = redis_pubsub.run_in_thread(sleep_time=0.01)
     if logger:
-        logger.info(f"Subscrbied to '{channel}' channel on Redis ...")
+        logger.info(f"Subscribed to '{channel}' channel on Redis ...")
     return thread
 
 
