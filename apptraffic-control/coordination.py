@@ -72,7 +72,7 @@ class CoordinationValidator:
             return False
         if not checkers.has_length(input, minimum=6):
             return False
-        if not re.search("[a-z]", input):
+        if re.search("[^a-z]", input):
             return False
         return True
 
